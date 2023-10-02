@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+    
+    <form action="index.php" method="post">
+
+        <h1>Validate by direct imput</h1>
+
+        <fieldset>
+            <legend>Validate by direct input</legend>
+
+            <label for="vali">Enter the Markup to validate</label> <br>
+            <textarea name="validacion" id="vali" cols="40" rows="10"></textarea> <br>
+
+            <input type="radio" name="opcion" id="full" checked>
+            <label for="full">Validate Full Document</label> <br>
+                <label for="doc">Use doctype</label>
+                <select name="doctype" id="doc">
+                    <option>(detect automatically)</option>
+                    <option value="html">HTML 4.01</option>
+                    <option value="xhtml">XHTML 1.0</option>
+                </select> <br>
+
+            <input type="radio" name="opcion" id="fragment">
+            <label for="fragment">Validate HTML fragment</label> <br>
+                <label>Use Doctype</label>
+                <input type="radio" id="HTML" name="tipo" checked>
+                <label for="HTML">HTML 4.01</label>
+                <input type="radio" id="XHTML" name="tipo">
+                <label for="XHTML">XHTML 1.0</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Options</legend>
+            <input type="radio" id="list" name="manera" checked>
+            <label for="list">List Messages Sequentially</label>
+            <input type="radio" id="group" name="manera">
+            <label for="group">Group Error Messages by Type</label> <br>
+
+            <input type="checkbox" id="source">
+            <label for="source">Show Source</label>
+
+            <input type="checkbox" id="markup">
+                <label for="markup">Clean up Markup with HTML-Tidy</label>
+        </fieldset>
+
+        <input type="submit" value="Check">
+
+    </form>
+</body>
+</html>
